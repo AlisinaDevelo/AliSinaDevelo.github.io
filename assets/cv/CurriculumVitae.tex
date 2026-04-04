@@ -1,96 +1,174 @@
-\documentclass[letterpaper, nocolor, draft]{moderncv}
-\moderncvtheme{classic}
-\usepackage[scale=0.75]{geometry}
-\recomputelengths
-\moderncvcolor{blue}
-\usepackage[utf8]{inputenc}
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
 \usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{xcolor} % Fixed: Added for \color support
 
-\nopagenumbers{}
+% Document Margins
+\geometry{left=0.6in, top=0.5in, right=0.6in, bottom=0.5in}
 
-\firstname{AliSina}
-\familyname{Karimi}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% \title{Software Developer}
+% Fix for footskip warning
+\setlength{\footskip}{4.1pt}
 
-\email{alisinakarimi.2003@gmail.com}
- \homepage{alisinadevelo.github.io}
-% \extrainfo{}
-% \photo[][]{}
-\social[github]{AliSinaDevelo}
-\social[linkedin]{alisina-karimi-43a834224}
+% Section formatting - Minimal & ATS Friendly
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% \renewcommand{\section}[1]{\vspace{6pt}\par{\large\textbf{#1}}\par\nobreak\vspace{4pt}\hrule\vspace{8pt}}
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
 
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
-\title{Software Engineer}
-\maketitle
 
+%----------HEADER----------
+\begin{center}
+    {\Huge \textbf{Alisina Karimi}} \\ \vspace{4pt}
+    \small Turin, Italy $|$ +39 379 2931549 $|$ 
+    \href{mailto:alisinakarimi.2003@gmail.com}{\underline{alisinakarimi.2003@gmail.com}} \\
+    \href{https://alisinadevelo.github.io}{\underline{Portfolio}} $|$ 
+    \href{https://github.com/AliSinaDevelo}{\underline{GitHub}} $|$ 
+    \href{https://linkedin.com/in/alisina-karimi}{\underline{LinkedIn}}
+\end{center}
+
+%-----------SUMMARY-----------
 \section{Summary}
-Aspiring computer scientist and versatile software engineer driven by a deep-seated curiosity for advancing technology. Dedicated to pioneering innovative solutions through comprehensive knowledge of programming languages and frameworks. With a solid foundation in software development principles and a keen interest in research, I strive to push the boundaries of possibility in the digital realm. Eager to contribute my skills and passion for discovery to challenging projects and collaborative environments, shaping the future of computing.
+\small{Software Engineer specializing in scalable systems and distributed architectures. B.Sc. in Computer Engineering with a track record of optimizing production systems, reducing infrastructure costs via architectural improvements, and building end-to-end analytics platforms. Experienced in high-autonomy remote environments across multiple time zones.}
 
-\section{Education}
-\cventry{September 2021 - 2025}{Polytechnic of Turin} {Bachelor of Science - Computer Engineering}{
-Greater Turin Metropolitan Area, Piedmont, Italy}{}{Relevant coursework:   }
-
+%-----------EXPERIENCE-----------
 \section{Experience}
-\cventry{September 2022 - May 2024}{Member, Developer in AreaIT}{RUN Polito APS-ETS}{Greater Turin Metropolitan Area, Piedmont, Italy}{}{
-\begin{itemize}
-\item Contributes as a member to the development of the RUN Polito APS-ETS internal framework.
-\item Engaged in programming tasks within the project's web stack using  JavaScript, Go, and other relevant technologies
-\end{itemize}
-}
+  \resumeSubHeadingListStart
 
-\cventry{May 2022 - August 2022}{Back-end Developer}{WEEEOpen}{Greater Turin Metropolitan Area, Piedmont, Italy}{}{
-\begin{itemize}
-\item Assisted senior developers with the design, development, and testing of web applications using React, Django, and Node.js
-\item Collaborated with cross-functional teams to identify and solve technical issues and improve the user experience of web applications
-\item Contributed to the development of internal tools and automation scripts to streamline software development processes
-\end{itemize}
-}
+    \resumeSubheading
+      {WineHub Commerce}{Nov 2024 -- Present}
+      {Full Stack / Backend Engineer}{Adelaide, Australia (Remote)}
+      \resumeItemListStart
+        \resumeItem{Optimized database queries and performance, achieving \textbf{3×--10× improvements} across critical workloads.}
+        \resumeItem{Worked on migration from MariaDB to \textbf{PostgreSQL}, resulting in a \textbf{~60\% infrastructure cost reduction}.}
+        \resumeItem{Designed and implemented \textbf{Go-based microservices} for analytics, billing, and webhook processing.}
+        \resumeItem{Built a full BI platform (custom dashboards, reporting pipelines) for financial decision-making.}
+        \resumeItem{Integrated compliance/fulfillment APIs: Sovos ShipCompliant, Avalara, VinoShipper, and WineDirect.}
+        \resumeItem{Automated reporting and compliance pipelines, significantly reducing operational overhead.}
+      \resumeItemListEnd
 
-\section{Skills}
-\cvitem{Languages}{C, Go, Python, JavaScript/TypeScript, Bash, SQL}
-\cvitem{Web Technologies}{HTML, CSS, Bootstrap, Tailwind CSS}
-\cvitem{Containeri-\\zation tools}{Docker, Kubernetes}
-\cvitem{Code Editors}{Emacs}
-\cvitem{Cloud Platforms}{AWS, Firebase}
-\cvitem{Databases}{MySQL, PostgreSQL, SQLite,  MongoDB}
-\cvitem{Frameworks}{Vue.js, Node.js, React, Django, Svelte, FastAPI}
-%\cvitem{}
+ \resumeSubheading
+  {Moneyviz srl}{May 2024 -- Nov 2024}
+  {Full Stack Developer}{Turin, Italy}
+  \resumeItemListStart
+    \resumeItem{Developed financial analytics features using \textbf{Laravel} and \textbf{Vue.js}, enabling portfolio performance tracking and visualization for end users.}
+    \resumeItem{Improved backend data ingestion and transformation pipelines, reducing latency of analytical queries and improving responsiveness of dashboards.}
+    \resumeItem{Refactored data processing logic to improve consistency across financial reporting workflows and reduce edge-case discrepancies.}
+    \resumeItem{Collaborated closely with product stakeholders to translate financial requirements into scalable backend and UI implementations.}
+  \resumeItemListEnd
 
+\resumeSubheading
+  {RUN Polito APS-ETS}{Sep 2022 -- May 2024}
+  {Software Developer}{Turin, Italy}
+  \resumeItemListStart
+    \resumeItem{Developed internal tools using \textbf{Go} and \textbf{JavaScript} to support operational workflows for a multi-team student organization.}
+    \resumeItem{Automated administrative and coordination processes, reducing manual workload and improving turnaround time for internal requests.}
+    \resumeItem{Refactored legacy services to improve maintainability and reliability, reducing recurring issues and simplifying future feature development.}
+    \resumeItem{Worked directly with non-technical stakeholders to identify inefficiencies and design practical software solutions.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {WEEEOpen}{May 2022 -- Aug 2022}
+  {Back-end Developer}{Turin, Italy}
+  \resumeItemListStart
+    \resumeItem{Improved backend services using \textbf{Django}, enhancing performance and stability of core application features.}
+    \resumeItem{Supported frontend integration using \textbf{React}, improving data flow between backend APIs and user interfaces.}
+    \resumeItem{Participated in debugging and issue resolution across the stack, reducing friction in development and testing cycles.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Open Source / Freelance Developer}{Sep 2021 -- Present}
+  {Software Developer}{Remote}
+  \resumeItemListStart
+    \resumeItem{Designed and implemented distributed data processing prototypes using \textbf{Kafka} and \textbf{Node.js} for event-driven workflows.}
+    \resumeItem{Contributed to open-source backend projects, focusing on API design, documentation, and developer experience improvements.}
+    \resumeItem{Worked independently on multiple small-scale projects, strengthening ability to scope, design, and deliver features end-to-end.}
+  \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
 \section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Chatster} $|$ \emph{Go, React, SQLite, Gorilla WebSockets}}{}
+          \resumeItemListStart
+            \resumeItem{Built a real-time chat system with stateful connection management and heartbeat monitoring.}
+            \resumeItem{Optimized message persistence using \textbf{SQLite in WAL mode} for low-latency writes.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\subsection{Chatster}
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, Python, C, PHP, JavaScript/TypeScript, SQL, Java} \\
+     \textbf{Frameworks}{: React, Vue.js, Django, Laravel, FastAPI, Symfony, Gin} \\
+     \textbf{Cloud/DevOps}{: Docker, Kubernetes, AWS, Terraform, Kafka, CI/CD} \\
+     \textbf{Databases}{: PostgreSQL, MySQL, MariaDB, MongoDB, SQLite}
+    }}
+ \end{itemize}
 
-\cvlistitem{Designed and developed using Go for backend infrastructure management.}
-\cvlistitem{Utilized ReactJS for frontend development.}
-\cvlistitem{Chatster is a comprehensive real-time chat application equipped with a wide array of features. It serves as a robust framework adaptable for various chat systems within organizational environments.}
-
-\subsection{Newsact}
-
-\cvlistitem{Developed using Python in conjunction with Scikit-learn.}
-\cvlistitem{Newsact functions as a machine learning tool engineered to discern between authentic news and misinformation, thus combating the proliferation of fake news.}
-
-\subsection{Quorabust}
-
-\cvlistitem{Implemented using Python, employing Bag-of-Words (BOW), TFIDF, and XGBoost algorithms.}
-\cvlistitem{Quorabust serves as a tool facilitating the discovery of similar Quora questions to aid users in finding pertinent answers. Its functionality aims to streamline the process of locating relevant information within the Quora platform.}
-
+%-----------CERTIFICATIONS-----------
 \section{Certifications}
-% \cventry{}{Algorithms Specialization}{Stanford University}{}{}{}
-%\cventry{}{Machine Learning Specialization}{Stanford University x DeepLearning.AI}{}{}{}
-\cventry{}{Python for Everybody}{University of Michigan - Ann Arbor}{}{}{}
-\cventry{}{Meta Front-End Developer Professional Certificate}{Meta}{}{}{}
-\cventry{}{Meta Back-End Developer Professional Certificate}{Meta}{}{}{}
-\cventry{}{Full-Stack Legacy Certification}{FreeCodeCamp}{}{}{}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{Algorithms Specialization (Stanford), Machine Learning (DeepLearning.AI), Meta Backend/Frontend Developer}}
+\end{itemize}
 
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Politecnico di Torino}{Sep 2025 -- Present}
+    {M.Sc. in Computer Engineering}{Turin, Italy}
+  \resumeSubheading
+    {Politecnico di Torino}{Sep 2021 -- Sep 2025}
+    {B.Sc. in Computer Engineering}{Turin, Italy}
+\resumeSubHeadingListEnd
+
+%-----------LANGUAGES-----------
 \section{Languages}
-\cvlanguage{English}{Native or Bilingual Proficiency}{}
-\cvlanguage{Persian}{Native or Bilingual Proficiency}{}
-\cvlanguage{German}{Full Professional Fluency}{}
-\cvlanguage{Italian}{Fluent}{}
-\cvlanguage{French}{Fluent}{}
+    \small{English (Bilingual), Persian (Bilingual), German (Professional), Italian (Fluent), French (Fluent)}
 
 \end{document}
