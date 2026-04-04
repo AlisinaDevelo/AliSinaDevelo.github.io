@@ -19,7 +19,7 @@
         <p class="">alisinakarimi.2003@gmail.com</p> -->
         <p>
             <b class="pr-2">Email</b>
-            <a href="alisinakarimi.2003@gmail.com" target="_blank" class="text-violet-400"
+            <a href="mailto:alisinakarimi.2003@gmail.com" class="text-violet-400"
                 >alisinakarimi.2003@gmail.com<sup class=""
                     ><span class="text-xs scale-75 pl-0.5"
                         ><i
@@ -31,7 +31,7 @@
         </p>
         <p>
             <b class="pr-2">GitHub</b>
-            <a href="https://github.com/AliSinaDevelo/" target="_blank" class="text-violet-400"
+            <a href="https://github.com/AliSinaDevelo/" target="_blank" rel="noopener noreferrer" class="text-violet-400"
                 >AliSinaDevelo<sup class=""
                     ><span class="text-xs scale-75 pl-0.5"
                         ><i
@@ -43,7 +43,7 @@
         </p>
         <p>
             <b class="pr-2">LinkedIn</b>
-            <a href="https://www.linkedin.com/in/alisina-karimi-43a834224/" target="_blank" class="text-violet-400"
+            <a href="https://www.linkedin.com/in/alisina-karimi/" target="_blank" rel="noopener noreferrer" class="text-violet-400"
                 >Alisina Karimi<sup class=""
                     ><span class="text-xs scale-75 pl-0.5"
                         ><i
