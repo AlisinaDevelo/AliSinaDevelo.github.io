@@ -113,7 +113,7 @@
                 Turin, Italy · Remote-friendly
             </p>
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl leading-tight">
-                <span class="poppins text-violet-400">AliSina</span> Karimi
+                <span class="poppins text-violet-400">Alisina</span> Karimi
                 <br />
                 <span class="text-white">Software Engineer</span>
             </h2>

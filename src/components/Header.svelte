@@ -20,7 +20,7 @@
             : " py-6 bg-transparent border-transparent")}
 >
     <a href="{base}/#introPage" class="font-medium hover:text-violet-300 duration-200">
-        <b class="font-bold poppins">AliSina</b> Karimi
+        <b class="font-bold poppins">Alisina</b> Karimi
     </a>
     <nav class="sm:flex items-center gap-5 hidden" aria-label="Primary">
         {#each tabs as tab}
