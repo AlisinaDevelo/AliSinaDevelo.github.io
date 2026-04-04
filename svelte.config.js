@@ -13,11 +13,14 @@ const config = {
       strict: true
     }),
     paths: {
-      // Set the base path for production; use an empty string for development
-      base: process.env.NODE_ENV === 'production' ? '/AliSinaDevelo.github.io' : '',
-      //base: '/AliSinaDevelo.github.io',
-      // include cv assets './static/assets/cv/output/CurriculumVitae.pdf'
-     // assets: '/AliSinaDevelo.github.io/static/assets/cv/output'
+      // `username.github.io` repos are served at https://username.github.io/ (root).
+      // A subpath base breaks asset URLs and returns index.html for *.js → MIME type errors.
+      // If you ever deploy as a *project* site (e.g. username.github.io/other-repo/), set:
+      //   base: '/other-repo'
+      // and build with that path, or use SVELTEKIT_BASE_PATH below.
+      base:
+        process.env.SVELTEKIT_BASE_PATH ??
+        (process.env.NODE_ENV === 'production' ? '' : ''),
     }
   },
   preprocess: vitePreprocess()

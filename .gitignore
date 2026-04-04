@@ -1,6 +1,12 @@
 .DS_Store
 node_modules
 /build
+
+# LaTeX build noise (keep CurriculumVitae.pdf committed under static/assets/cv/output/)
+static/assets/cv/**/*.aux
+static/assets/cv/**/*.log
+static/assets/cv/**/*.out
+static/assets/cv/**/*.synctex.gz
 /.svelte-kit
 /package
 .env

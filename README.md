@@ -14,8 +14,8 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AliSinaDevelo/DevelosPortfolio.git
-   cd DevelosPortfolio
+   git clone https://github.com/AliSinaDevelo/AliSinaDevelo.github.io.git
+   cd AliSinaDevelo.github.io
    ```
 
 2. **Install dependencies:**
