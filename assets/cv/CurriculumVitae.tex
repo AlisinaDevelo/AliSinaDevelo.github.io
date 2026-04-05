@@ -131,10 +131,36 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Chatster} $|$ \emph{Go, React, SQLite, Gorilla WebSockets}}{}
+          {\textbf{Chatster} $|$ \emph{Go, React, SQLite, Gorilla WebSocket, Prometheus, Docker, GitHub Actions}}{}
           \resumeItemListStart
-            \resumeItem{Built a real-time chat system with stateful connection management and heartbeat monitoring.}
-            \resumeItem{Optimized message persistence using \textbf{SQLite in WAL mode} for low-latency writes.}
+            \resumeItem{Designed a \textbf{real-time chat} reference stack: WebSocket hub with buffered broadcast, \textbf{per-client write serialization} for safe concurrent use of Gorilla WebSocket, and \textbf{SQLite}-backed history with configurable replay of recent messages on connect.}
+            \resumeItem{Shipped operator-facing endpoints: structured \textbf{JSON logging} (\texttt{slog}), \textbf{graceful shutdown}, \texttt{/health} with database ping (degraded \texttt{503}), and \texttt{/metrics} for \textbf{Prometheus}.}
+            \resumeItem{Added \textbf{abuse controls}: maximum username/message sizes, \textbf{per-IP WebSocket upgrade rate limiting}, and optional \textbf{Origin} allowlist for production hardening.}
+            \resumeItem{Automated quality with \textbf{GitHub Actions} (Go tests with race detector, coverage, \textbf{ESLint} on the React SPA), \textbf{Docker Compose} for local full-stack runs, and portfolio-grade architecture, threat-model, and scaling documentation.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Quorabust} $|$ \emph{Python, XGBoost, scikit-learn, HTTP API, Prometheus, Docker, pytest}}{}
+          \resumeItemListStart
+            \resumeItem{Built an installable \textbf{Python} library for \textbf{Quora-style duplicate question detection}: text cleaning, pairwise \textbf{TF--IDF} and lexical features, \textbf{XGBoost} classifier, and optional \textbf{embedding}-based feature backends.}
+            \resumeItem{Delivered \textbf{train and serve CLIs} plus an HTTP service exposing prediction, \textbf{Prometheus} metrics at \texttt{/metrics}, interactive \textbf{API documentation}, and optional \textbf{A/B} model selection via request headers for controlled rollouts.}
+            \resumeItem{Persisted models with rich \textbf{metadata}: training counts, evaluation metrics, dataset checksums, and reference feature statistics to support \textbf{reproducibility} and \textbf{drift} awareness when loading trusted artifacts only.}
+            \resumeItem{Enforced engineering rigor with \textbf{pytest} and coverage thresholds, \textbf{Ruff} and \textbf{mypy}, \textbf{pre-commit}, container-friendly packaging, and operational guides for \textbf{load testing} and \textbf{Grafana} monitoring.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{news-api} $|$ \emph{TypeScript, Express, Node.js, Redis, OpenAPI, Docker, Kubernetes}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented a \textbf{production-oriented} news search API on \textbf{Express} and \textbf{TypeScript} integrating the GNews provider with a \textbf{pluggable cache} (in-memory or \textbf{Redis}) to deduplicate identical queries and protect upstream quota.}
+            \resumeItem{Hardened the edge: \textbf{Helmet} security headers, configurable \textbf{rate limiting}, optional \textbf{client API keys} on \texttt{/api/*}, \textbf{TRUST\_PROXY}-aware client IP handling, upstream \textbf{HTTP timeouts}, strict response validation, and \textbf{502} mapping for provider failures.}
+            \resumeItem{Instrumented for operations: \textbf{Pino} JSON logs with \textbf{request IDs}, \texttt{/metrics} in \textbf{Prometheus} text format, optional \textbf{OpenTelemetry} export to OTLP, and Kubernetes-style \textbf{liveness} and \textbf{readiness} probes.}
+            \resumeItem{Published an \textbf{OpenAPI} contract at \texttt{/openapi.yaml}; shipped a multi-stage, \textbf{non-root} Dockerfile with health checks, \textbf{docker-compose}, example \textbf{Kubernetes} manifests, and CI emphasizing audits, \textbf{SBOM}, and provenance-style supply-chain checks.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{StreamHive} $|$ \emph{Go, TCP/TLS, custom framing (SHV1), Prometheus, Docker}}{}
+          \resumeItemListStart
+            \resumeItem{Authored a \textbf{Go} library and CLI experimenting with \textbf{distributed, content-addressed} blob storage over \textbf{TCP}: length-prefixed \textbf{SHV1} frames, explicit wire \textbf{handshake version}, and context-aware listen/dial with \textbf{TLS} hooks and connection limits.}
+            \resumeItem{Implemented an in-memory \textbf{BlobStore} behind a stable interface, separating transport and storage so future \textbf{replication} and \textbf{peer discovery} can evolve without rewriting the framing layer.}
+            \resumeItem{Exposed standard \textbf{/livez}, \textbf{/readyz}, and \textbf{/metrics} HTTP endpoints alongside the TCP data plane for orchestrator-friendly deployments; documented public API \textbf{semver} and architecture trade-offs in \textbf{CHANGELOG} and design docs.}
+            \resumeItem{Applied mature engineering workflow: \textbf{golangci-lint}, \textbf{Makefile} targets (test, race, coverage, vet), Docker image, and CI that \textbf{pins third-party Actions to SHAs}, uploads coverage, and emits a \textbf{CycloneDX SBOM}.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -143,9 +169,10 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Go, Python, C, PHP, JavaScript/TypeScript, SQL, Java} \\
-     \textbf{Frameworks}{: React, Vue.js, Django, Laravel, FastAPI, Symfony, Gin} \\
-     \textbf{Cloud/DevOps}{: Docker, Kubernetes, AWS, Terraform, Kafka, CI/CD} \\
-     \textbf{Databases}{: PostgreSQL, MySQL, MariaDB, MongoDB, SQLite}
+     \textbf{Frameworks}{: React, Vue.js, Express (Node.js), Django, Laravel, FastAPI, Symfony, Gin} \\
+     \textbf{ML / NLP}{: scikit-learn, XGBoost; text features (TF--IDF, embedding models)} \\
+     \textbf{Cloud / DevOps}{: Docker, Kubernetes, AWS, Terraform, Kafka, GitHub Actions, CI/CD, Prometheus, Grafana, OpenTelemetry} \\
+     \textbf{Databases \& cache}{: PostgreSQL, MySQL, MariaDB, MongoDB, SQLite, Redis}
     }}
  \end{itemize}
 
