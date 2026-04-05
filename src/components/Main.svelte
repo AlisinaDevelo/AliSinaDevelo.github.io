@@ -1,6 +1,6 @@
 <script>
     import { base } from "$app/paths";
-    import Step from "./Step.svelte";
+    import ProjectShowcase from "./ProjectShowcase.svelte";
 
     $: cvHref = `${base}/assets/cv/output/CurriculumVitae.pdf`;
 
@@ -8,26 +8,98 @@
         {
             name: "Chatster",
             icon: "fa-solid fa-comments",
-            href: "https://github.com/AliSinaDevelo/Chatster",
-            stack: "Go · React · SQLite · Gorilla WebSockets",
-            blurb:
-                "Real-time chat with connection management, heartbeats, and SQLite WAL mode for low-latency message persistence—built as a foundation you can adapt for team or product chat.",
+            accent: "violet",
+            tagline:
+                "Real-time chat reference stack: Go WebSocket hub, SQLite history, React UI, Docker, and portfolio-grade ops docs.",
+            github: "https://github.com/AliSinaDevelo/Chatster",
+            stack: [
+                "Go 1.22",
+                "Gorilla WebSocket",
+                "SQLite",
+                "React 18",
+                "Prometheus",
+                "Docker",
+                "GitHub Actions",
+            ],
+            body: "End-to-end stack meant to read like production work: structured logging, metrics, health checks, rate limits, and explicit security controls—not a weekend demo with a README stub.",
+            highlights: [
+                "Buffered hub with per-client write serialization for safe concurrent WebSocket writes.",
+                "Replays the last 50 messages on connect; SQLite persistence with tolerant timestamp parsing.",
+                "GET /health with DB ping (503 when degraded) and GET /metrics for Prometheus scraping.",
+                "Abuse controls: max username/message size, per-IP WebSocket upgrade rate limit, optional Origin allowlist.",
+                "slog JSON logs, graceful shutdown, CI for Go + frontend tests, coverage, ESLint, and Docker Compose.",
+            ],
         },
         {
             name: "Quorabust",
-            icon: "fa-solid fa-magnifying-glass",
-            href: "https://github.com/AliSinaDevelo/Quorabust",
-            stack: "Python · scikit-learn",
-            blurb:
-                "Similar-question discovery for Quora-style datasets using BoW, TF-IDF, and gradient-boosted models—useful NLP and retrieval practice beyond toy tutorials.",
+            icon: "fa-solid fa-layer-group",
+            accent: "emerald",
+            tagline:
+                "Installable Python library for Quora-style duplicate detection—features, training CLI, HTTP API, and observability.",
+            github: "https://github.com/AliSinaDevelo/Quorabust",
+            stack: [
+                "Python",
+                "XGBoost",
+                "TF–IDF",
+                "HTTP API + /docs",
+                "Prometheus",
+                "Docker",
+                "Pytest",
+            ],
+            body: "Goes beyond a Kaggle notebook: packaged preprocessing, model training and persistence, a served prediction API with metrics and optional A/B artifacts, plus docs for load testing and Grafana.",
+            highlights: [
+                "clean_text → feature builders → XGBoost; optional embedding backend instead of classic TF–IDF.",
+                "quorabust-train and quorabust-serve CLIs; GET /metrics, POST /predict, variant header for A/B, interactive /docs.",
+                "Saved pickles include meta: training size, metrics, CSV checksum, git revision, feature means for drift awareness.",
+                "Ruff, mypy, pytest with coverage gates, pre-commit; enterprise/scaling notes and container-friendly layout.",
+            ],
         },
         {
-            name: "Newsact",
-            icon: "fa-solid fa-newspaper",
-            href: "https://github.com/AliSinaDevelo/Newsact",
-            stack: "Python · scikit-learn",
-            blurb:
-                "Classifier pipeline to separate credible reporting from misinformation—earlier ML work that sharpened feature engineering and evaluation habits.",
+            name: "news-api",
+            icon: "fa-solid fa-bolt",
+            accent: "sky",
+            tagline:
+                "Express + TypeScript news search API on top of GNews—caching, hardening, and full ops surface.",
+            github: "https://github.com/AliSinaDevelo/news-api",
+            stack: [
+                "Node.js",
+                "TypeScript",
+                "Express",
+                "Redis",
+                "OpenAPI",
+                "Prometheus",
+                "Kubernetes",
+            ],
+            body: "Designed like something you could run behind a load balancer: upstream timeouts, response validation, optional API keys, Redis-backed deduplication of identical searches, and CI that ships SBOMs and provenance—not only npm test.",
+            highlights: [
+                "Helmet, configurable rate limits, optional CLIENT_API_KEYS + X-API-Key on /api/*, TRUST_PROXY for real client IPs.",
+                "Pino JSON logs, x-request-id, GET /metrics; optional OpenTelemetry export to OTLP.",
+                "GET /health and GET /ready; contract published at GET /openapi.yaml; graceful shutdown on SIGTERM/SIGINT.",
+                "Multi-stage Docker (non-root + healthcheck), Compose, example K8s manifests; CodeQL, dependency review, lockfile attestation in CI.",
+            ],
+        },
+        {
+            name: "StreamHive",
+            icon: "fa-solid fa-network-wired",
+            accent: "amber",
+            tagline:
+                "Go library and CLI for experimenting with distributed, content-addressed storage over TCP.",
+            github: "https://github.com/AliSinaDevelo/StreamHive",
+            stack: [
+                "Go 1.22+",
+                "TCP / TLS",
+                "Custom framing (SHV1)",
+                "BlobStore API",
+                "Prometheus",
+                "Docker",
+            ],
+            body: "Focuses on the unglamorous layer: connection handling, framing, metrics, and health endpoints before global replication exists—public API versioned in CHANGELOG (v0.2.0, pre-1.0) with honest architecture docs.",
+            highlights: [
+                "TCPTransport with context-aware listen/dial, TLS hooks, length-prefixed SHV1 frames, peer caps, and metrics.",
+                "MemoryStore implements BlobStore; wire handshake version constant for app-level protocols.",
+                "HTTP /livez, /readyz, /metrics alongside the TCP surface for orchestrator-friendly deployments.",
+                "Makefile and golangci-lint; CI pins Actions to commit SHAs, uploads coverage and CycloneDX SBOM.",
+            ],
         },
     ];
 
@@ -192,29 +264,30 @@
         </div>
     </section>
 
-    <section class="py-16 lg:py-24 flex flex-col gap-14 scroll-mt-24" id="projects">
-        <div class="flex flex-col gap-2 text-center">
+    <section class="py-16 lg:py-28 flex flex-col gap-16 scroll-mt-24" id="projects">
+        <div class="max-w-3xl mx-auto flex flex-col gap-3 text-center">
             <p class="text-xs uppercase tracking-[0.2em] text-violet-400/90">Projects</p>
             <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
                 Code you can <span class="poppins text-violet-400">inspect</span>
             </h3>
-            <p class="text-slate-400 max-w-xl mx-auto mt-2">
-                Open source and personal builds—Chatster reflects production-style backend design; the ML repos are
-                earlier experiments that still show how I reason about data and models.
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                Four public repositories that span real-time messaging, ML serving, hardened HTTP APIs, and low-level
+                distributed systems—each with tests, containers or CI, and documentation meant for reviewers and
+                operators. Use <strong class="text-slate-300 font-medium">See on GitHub</strong> on any card to open the
+                repo.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
-            {#each projects as p}
-                <Step step={{ name: p.name, icon: p.icon, href: p.href }}>
-                    <p class="text-xs uppercase tracking-wider text-violet-400/80 mb-1">{p.stack}</p>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">{p.blurb}</p>
-                </Step>
+        <div class="mx-auto flex w-full max-w-5xl flex-col gap-10 lg:gap-12">
+            {#each projects as project}
+                <ProjectShowcase {project} />
             {/each}
         </div>
         <p class="text-center text-slate-500 text-sm">
-            More repositories on
-            <a class="text-violet-400 hover:underline" href="https://github.com/AliSinaDevelo">GitHub</a>.
+            More work on
+            <a class="text-violet-400 hover:underline font-medium" href="https://github.com/AliSinaDevelo"
+                >github.com/AliSinaDevelo</a
+            >.
         </p>
     </section>
 
