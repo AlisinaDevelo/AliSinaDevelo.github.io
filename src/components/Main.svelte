@@ -334,8 +334,7 @@
         </div>
         <div class="max-w-2xl mx-auto space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed">
             <p>
-                I am pursuing an <strong class="text-white font-medium">M.Sc. in Computer Engineering</strong> at
-                Politecnico di Torino (B.Sc. completed 2025). School sharpened the fundamentals; my professional
+                Computer Engineering background from Politecnico di Torino. My professional
                 roles are where I learned to trade off latency, cost, and maintainability under real constraints.
             </p>
             <p>
