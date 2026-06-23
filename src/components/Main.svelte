@@ -6,6 +6,29 @@
 
     const projects = [
         {
+            name: "SignalForge",
+            icon: "fa-solid fa-shield-halved",
+            accent: "rose",
+            private: true,
+            tagline:
+                "Cross-LLM security lab: specialist agents, methodology skills, executable adapters, detection replay, and scope-aware safety hooks.",
+            stack: [
+                "Claude Code / Codex",
+                "Python",
+                "Detection replay",
+                "Eval harness",
+                "Safety hooks",
+                "DFIR / RE",
+            ],
+            body: "An open-lane security toolkit that lets multiple LLMs operate from one auditable security contract—offense is always paired with matching detection and remediation, behind fast scope gates. Private for now; happy to walk through it.",
+            highlights: [
+                "Specialist agents for red, blue, purple, DFIR, reverse engineering, and detection engineering.",
+                "Executable parsers and tool adapters—real inputs in, normalized findings out—not just prompts.",
+                "Detection replay over recorded telemetry plus an eval harness that scores agent behavior.",
+                "Scope-aware safety hooks (.cy-lab / .cy-scope) so high-impact actions require explicit authorization.",
+            ],
+        },
+        {
             name: "Chatster",
             icon: "fa-solid fa-comments",
             accent: "violet",
@@ -181,20 +204,30 @@
         class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 py-10 sm:py-16 lg:py-20 items-center"
     >
         <div class="flex flex-col text-center lg:text-left gap-6 md:gap-8">
-            <p class="text-xs uppercase tracking-[0.2em] text-violet-400/90 font-medium">
-                Turin, Italy · Remote-friendly
+            <p class="mono inline-flex items-center gap-2 self-center lg:self-start text-xs tracking-wide text-violet-300/90">
+                <span class="relative flex h-2 w-2">
+                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                </span>
+                Turin, Italy · open to remote roles
             </p>
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl leading-tight">
                 <span class="poppins text-violet-400">Alisina</span> Karimi
                 <br />
-                <span class="text-white">Software Engineer</span>
+                <span class="text-white">Backend / Platform Engineer</span>
             </h2>
             <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 I build and optimize <span class="text-white font-medium">scalable backends</span>,
                 <span class="text-white font-medium">data-heavy products</span>, and
-                <span class="text-white font-medium">integrations</span> that hold up in production. Recent work
-                includes PostgreSQL migrations, Go microservices, and BI tooling for commerce and finance teams.
+                <span class="text-white font-medium">integrations</span> that hold up in production—currently
+                shipping Go services, PostgreSQL migrations, and AWS platform work remotely for an
+                Australia-based commerce company.
             </p>
+            <div class="mono flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-1 text-xs text-slate-400">
+                <span class="text-emerald-300/90">▸ EU-based contractor (partita IVA) or EOR</span>
+                <span class="text-slate-600">·</span>
+                <span>no visa sponsorship needed</span>
+            </div>
             <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <a
                     href="#contact"
@@ -216,23 +249,27 @@
             </div>
         </div>
         <div
-            class="rounded-2xl border border-violet-800/60 bg-slate-900/50 p-6 sm:p-8 backdrop-blur-sm text-left"
+            class="rounded-2xl border border-violet-800/60 bg-slate-950/70 backdrop-blur-sm overflow-hidden shadow-[0_20px_60px_-30px_rgba(109,40,217,0.5)]"
         >
-            <h3 class="poppins text-sm uppercase tracking-widest text-violet-400 mb-4">At a glance</h3>
-            <ul class="space-y-3 text-slate-300 text-sm sm:text-base">
-                <li class="flex gap-2">
-                    <span class="text-violet-400 shrink-0">▹</span>
-                    Production impact: performance wins, cost reduction, and automation—not only greenfield demos.
-                </li>
-                <li class="flex gap-2">
-                    <span class="text-violet-400 shrink-0">▹</span>
-                    Comfortable owning features end-to-end across Go, PHP/Laravel, and modern frontends (React, Vue).
-                </li>
-                <li class="flex gap-2">
-                    <span class="text-violet-400 shrink-0">▹</span>
-                    High-autonomy remote collaboration across time zones (current role, Australia-based company).
-                </li>
-            </ul>
+            <div class="flex items-center gap-2 border-b border-violet-900/50 bg-slate-900/60 px-4 py-3">
+                <span class="h-3 w-3 rounded-full bg-rose-500/80" aria-hidden="true"></span>
+                <span class="h-3 w-3 rounded-full bg-amber-400/80" aria-hidden="true"></span>
+                <span class="h-3 w-3 rounded-full bg-emerald-400/80" aria-hidden="true"></span>
+                <span class="mono ml-2 text-xs text-slate-400">alisina@workbench: ~</span>
+            </div>
+            <div class="mono p-5 sm:p-6 text-[13px] leading-relaxed text-slate-300">
+                <p><span class="text-violet-400">$</span> whoami</p>
+                <p class="pl-3 text-slate-400">backend / platform engineer · remote</p>
+                <p class="mt-3"><span class="text-violet-400">$</span> cat stack.txt</p>
+                <p class="pl-3 text-slate-400">Go · PHP/Symfony · TypeScript · Python</p>
+                <p class="pl-3 text-slate-400">AWS · Terraform · Packer · Docker · k8s</p>
+                <p class="pl-3 text-slate-400">PostgreSQL · Redis/Valkey · SQS · Prometheus</p>
+                <p class="mt-3"><span class="text-violet-400">$</span> git log --oneline -3</p>
+                <p class="pl-3 text-emerald-300/90">perf&nbsp;&nbsp;3×–10× faster production queries</p>
+                <p class="pl-3 text-emerald-300/90">infra&nbsp;~60% cost cut · MariaDB → PostgreSQL</p>
+                <p class="pl-3 text-emerald-300/90">scale&nbsp;sessions + async work externalized</p>
+                <p class="mt-3"><span class="text-violet-400">$</span> <span class="caret">available for hire</span></p>
+            </div>
         </div>
     </section>
 
@@ -271,10 +308,10 @@
                 Code you can <span class="poppins text-violet-400">inspect</span>
             </h3>
             <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-                Four public repositories that span real-time messaging, ML serving, hardened HTTP APIs, and low-level
-                distributed systems—each with tests, containers or CI, and documentation meant for reviewers and
-                operators. Use <strong class="text-slate-300 font-medium">See on GitHub</strong> on any card to open the
-                repo.
+                A cross-LLM security lab plus four public repositories spanning real-time messaging, ML serving,
+                hardened HTTP APIs, and low-level distributed systems—each with tests, containers or CI, and
+                documentation meant for reviewers and operators. Use
+                <strong class="text-slate-300 font-medium">See on GitHub</strong> on any public card to open the repo.
             </p>
         </div>
 

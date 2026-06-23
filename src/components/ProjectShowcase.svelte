@@ -1,5 +1,5 @@
 <script>
-    /** @type {{ name: string; icon: string; accent: keyof typeof accentBar; tagline: string; stack: string[]; body: string; highlights: string[]; github: string }} */
+    /** @type {{ name: string; icon: string; accent: keyof typeof accentBar; tagline: string; stack: string[]; body: string; highlights: string[]; github?: string; demo?: string; private?: boolean }} */
     export let project;
 
     const accentBar = {
@@ -7,6 +7,7 @@
         emerald: "bg-gradient-to-b from-emerald-400 via-teal-500 to-cyan-700",
         sky: "bg-gradient-to-b from-sky-400 via-cyan-500 to-blue-600",
         amber: "bg-gradient-to-b from-amber-400 via-orange-500 to-rose-700",
+        rose: "bg-gradient-to-b from-rose-400 via-pink-500 to-fuchsia-700",
     };
 
     $: bar = accentBar[project.accent] ?? accentBar.violet;
@@ -41,16 +42,38 @@
                     </p>
                 </div>
             </div>
-            <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-full border border-violet-500/40 bg-violet-950/50 px-4 py-2.5 text-sm font-medium text-violet-200 transition-colors hover:border-violet-400 hover:bg-violet-600/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-            >
-                <i class="fa-brands fa-github text-base" aria-hidden="true" />
-                <span>See on GitHub</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70" aria-hidden="true" />
-            </a>
+            <div class="flex shrink-0 flex-wrap items-center gap-2 self-start">
+                {#if project.private}
+                    <span
+                        class="inline-flex items-center gap-2 rounded-full border border-rose-500/40 bg-rose-950/40 px-4 py-2.5 text-sm font-medium text-rose-200"
+                    >
+                        <i class="fa-solid fa-lock text-xs" aria-hidden="true" />
+                        <span>Private · walkthrough on request</span>
+                    </span>
+                {:else}
+                    {#if project.demo}
+                        <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-950/40 px-4 py-2.5 text-sm font-medium text-emerald-200 transition-colors hover:border-emerald-400 hover:bg-emerald-600/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                        >
+                            <i class="fa-solid fa-circle-play text-base" aria-hidden="true" />
+                            <span>Live demo</span>
+                        </a>
+                    {/if}
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-2 rounded-full border border-violet-500/40 bg-violet-950/50 px-4 py-2.5 text-sm font-medium text-violet-200 transition-colors hover:border-violet-400 hover:bg-violet-600/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                    >
+                        <i class="fa-brands fa-github text-base" aria-hidden="true" />
+                        <span>See on GitHub</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70" aria-hidden="true" />
+                    </a>
+                {/if}
+            </div>
         </header>
 
         <p class="text-sm leading-relaxed text-slate-300 sm:text-base max-w-3xl">
