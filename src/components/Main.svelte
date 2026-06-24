@@ -228,7 +228,7 @@
                     </span>
                 </a>
                 <a
-                    href="https://www.linkedin.com/in/alisina-karimi/"
+                    href="https://www.linkedin.com/in/alisina-karimi-43a834224/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="group flex items-center gap-4 rounded-2xl border border-violet-900/50 bg-slate-900/30 px-5 py-4 transition-colors hover:border-violet-500/50 hover:bg-violet-950/20"

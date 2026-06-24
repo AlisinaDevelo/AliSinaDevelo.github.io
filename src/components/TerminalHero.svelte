@@ -40,7 +40,7 @@
                 out: [
                     { kind: "link", text: "alisinakarimi.2003@gmail.com", href: "mailto:alisinakarimi.2003@gmail.com" },
                     { kind: "link", text: "github.com/AliSinaDevelo", href: "https://github.com/AliSinaDevelo" },
-                    { kind: "link", text: "linkedin.com/in/alisina-karimi", href: "https://www.linkedin.com/in/alisina-karimi/" },
+                    { kind: "link", text: "linkedin.com/in/alisina-karimi-43a834224", href: "https://www.linkedin.com/in/alisina-karimi-43a834224/" },
                 ],
             },
         ],

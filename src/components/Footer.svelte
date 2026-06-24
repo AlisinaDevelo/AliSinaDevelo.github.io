@@ -25,7 +25,7 @@
             <i class="fa-brands fa-github" />
         </a>
         <a
-            href="https://www.linkedin.com/in/alisina-karimi/"
+            href="https://www.linkedin.com/in/alisina-karimi-43a834224/"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-violet-300 transition-colors"
