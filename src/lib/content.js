@@ -5,13 +5,6 @@
 
 export const projectMeta = [
     {
-        name: "SignalForge",
-        icon: "fa-solid fa-shield-halved",
-        accent: "rose",
-        private: true,
-        stack: ["Claude Code / Codex", "Python", "Detection replay", "Eval harness", "Safety hooks", "DFIR / RE"],
-    },
-    {
         name: "Chatster",
         icon: "fa-solid fa-comments",
         accent: "violet",
@@ -46,6 +39,13 @@ export const projectMeta = [
         github: "https://github.com/AliSinaDevelo/md-files",
         stack: ["Claude Code", "Markdown", "Python", "Prompt evals", "Safety hooks", "Plugin"],
     },
+    {
+        name: "SignalForge",
+        icon: "fa-solid fa-shield-halved",
+        accent: "rose",
+        private: true,
+        stack: ["Claude Code / Codex", "Python", "Detection replay", "Eval harness", "Safety hooks", "DFIR / RE"],
+    },
 ];
 
 export const experienceMeta = [
@@ -79,7 +79,7 @@ export const t = {
         projects: {
             eyebrow: "Projects",
             headA: "Code you can ", headEm: "inspect", headB: "",
-            intro: "A cross-LLM security lab plus five public repositories spanning real-time messaging, ML serving, hardened HTTP APIs, low-level distributed systems, and AI developer tooling—each with tests, containers or CI, and documentation meant for reviewers and operators.",
+            intro: "Five public repositories spanning real-time messaging, ML serving, hardened HTTP APIs, low-level distributed systems, and AI developer tooling—each with tests, containers or CI, and documentation meant for reviewers and operators—plus a private cross-LLM security lab.",
             more: "More work on",
         },
         skills: {
@@ -215,7 +215,7 @@ export const t = {
         projects: {
             eyebrow: "Progetti",
             headA: "Codice che puoi ", headEm: "ispezionare", headB: "",
-            intro: "Un laboratorio di sicurezza cross-LLM più cinque repository pubblici che spaziano da messaggistica in tempo reale, serving ML, API HTTP irrobustite, sistemi distribuiti a basso livello e strumenti per sviluppatori basati su AI—ciascuno con test, container o CI e documentazione pensata per revisori e operatori.",
+            intro: "Cinque repository pubblici che spaziano da messaggistica in tempo reale, serving ML, API HTTP irrobustite, sistemi distribuiti a basso livello e strumenti per sviluppatori basati su AI—ciascuno con test, container o CI e documentazione pensata per revisori e operatori—più un laboratorio di sicurezza cross-LLM privato.",
             more: "Altro lavoro su",
         },
         skills: {
