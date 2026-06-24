@@ -57,9 +57,12 @@ export const experienceMeta = [
 ];
 
 export const skillItems = [
-    ["Go", "Python", "PHP", "JavaScript", "TypeScript", "SQL", "C", "Java"],
-    ["React", "Vue.js", "Django", "Laravel", "FastAPI", "Symfony", "Gin"],
-    ["PostgreSQL", "MySQL", "MariaDB", "MongoDB", "SQLite", "Docker", "Kubernetes", "AWS", "Terraform", "Kafka", "CI/CD"],
+    ["Go", "Python", "PHP", "TypeScript", "JavaScript", "SQL", "C", "Java"],
+    ["Symfony", "Laravel", "Express", "Django", "FastAPI", "Gin", "REST / OpenAPI", "WebSockets", "GraphQL"],
+    ["React", "Vue.js", "Svelte / SvelteKit", "Tailwind CSS"],
+    ["AWS", "EC2 / ASG / ALB", "Lambda", "SQS", "ElastiCache", "Terraform", "Packer", "Docker", "Kubernetes", "GitHub Actions", "Linux"],
+    ["PostgreSQL", "MySQL / MariaDB", "SQLite", "MongoDB", "Redis / Valkey", "Kafka", "Prometheus", "Grafana", "OpenTelemetry", "slog / Pino"],
+    ["LLM agents & tooling", "prompt evals", "scikit-learn", "XGBoost", "TF–IDF", "embeddings"],
 ];
 
 export const t = {
@@ -85,7 +88,7 @@ export const t = {
         skills: {
             eyebrow: "Skills",
             headA: "Stack aligned with ", headEm: "my résumé", headB: "",
-            titles: ["Languages", "Frameworks", "Data & infra"],
+            titles: ["Programming", "Backend & APIs", "Frontend", "Cloud & Platform", "Data & observability", "AI / ML"],
             certs: "Certifications (high level): Stanford Algorithms Specialization, DeepLearning.AI Machine Learning, Meta Back-end and Front-end Developer programs.",
         },
         about: {
@@ -221,7 +224,7 @@ export const t = {
         skills: {
             eyebrow: "Competenze",
             headA: "Stack allineato al ", headEm: "mio CV", headB: "",
-            titles: ["Linguaggi", "Framework", "Dati & infrastruttura"],
+            titles: ["Programmazione", "Backend & API", "Frontend", "Cloud & Platform", "Dati & osservabilità", "AI / ML"],
             certs: "Certificazioni (in sintesi): Stanford Algorithms Specialization, DeepLearning.AI Machine Learning, programmi Meta Back-end e Front-end Developer.",
         },
         about: {
