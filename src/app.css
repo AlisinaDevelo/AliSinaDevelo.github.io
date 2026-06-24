@@ -84,3 +84,89 @@ h3,
     object-position: center;
     object-fit: cover;
 }
+
+/* ------------------------------------------------------------------ *
+ * Light theme
+ * The site is authored dark-first (no `dark:` prefixes). Rather than
+ * re-wire every component, these rules remap the dark palette to light
+ * equivalents and only apply when <html> is NOT `.dark`. Higher
+ * specificity (html:not(.dark) .x) overrides the single-class utility,
+ * so the dark theme is left completely untouched.
+ * ------------------------------------------------------------------ */
+
+/* Neutral text */
+html:not(.dark) .text-white { color: #0f172a; }       /* slate-900 */
+html:not(.dark) .text-slate-200 { color: #1e293b; }   /* slate-800 */
+html:not(.dark) .text-slate-300 { color: #334155; }   /* slate-700 */
+html:not(.dark) .text-slate-400 { color: #475569; }   /* slate-600 */
+/* slate-500/600 read fine on light — left as authored */
+
+/* Violet accents — darken for contrast on light surfaces */
+html:not(.dark) .text-violet-200,
+html:not(.dark) .text-violet-200\/90,
+html:not(.dark) .text-violet-300,
+html:not(.dark) .text-violet-300\/90 { color: #6d28d9; }   /* violet-700 */
+html:not(.dark) .text-violet-400,
+html:not(.dark) .text-violet-400\/90 { color: #7c3aed; }   /* violet-600 */
+
+/* Status accents */
+html:not(.dark) .text-emerald-300\/90,
+html:not(.dark) .text-emerald-200,
+html:not(.dark) .text-emerald-200\/90 { color: #047857; }  /* emerald-700 */
+html:not(.dark) .text-sky-200,
+html:not(.dark) .text-sky-300\/90 { color: #0369a1; }      /* sky-700 */
+html:not(.dark) .text-rose-200 { color: #be123c; }         /* rose-700 */
+
+/* Surfaces */
+html:not(.dark) .bg-slate-950 { background-color: #ffffff; }
+html:not(.dark) .bg-slate-950\/95 { background-color: rgba(255, 255, 255, 0.95); }
+html:not(.dark) .bg-slate-950\/40 { background-color: rgba(255, 255, 255, 0.55); }
+html:not(.dark) .bg-slate-950\/70 { background-color: rgba(255, 255, 255, 0.75); }
+html:not(.dark) .bg-slate-900\/90 { background-color: #f1f5f9; }            /* slate-100 */
+html:not(.dark) .bg-slate-900\/80 { background-color: #f1f5f9; }            /* slate-100 */
+html:not(.dark) .bg-slate-900\/60 { background-color: rgba(241, 245, 249, 0.75); }
+html:not(.dark) .bg-slate-900\/50 { background-color: rgba(241, 245, 249, 0.65); }
+html:not(.dark) .bg-slate-900\/30 { background-color: rgba(241, 245, 249, 0.55); }
+html:not(.dark) .bg-violet-950\/80,
+html:not(.dark) .bg-violet-950\/50,
+html:not(.dark) .bg-violet-950\/40,
+html:not(.dark) .bg-violet-950\/20 { background-color: #ede9fe; }           /* violet-100 */
+
+/* Project cards use a dark diagonal gradient (only `to-br` in the app);
+ * gradient stops use different vars than solid bg-*, so flatten to a light
+ * surface here. The colored accent bars use `to-b` and stay vibrant. */
+html:not(.dark) .bg-gradient-to-br {
+    background-image: none;
+    background-color: #f8fafc;                 /* slate-50 */
+}
+html:not(.dark) .bg-rose-950\/40 { background-color: #ffe4e6; }             /* rose-100 */
+html:not(.dark) .bg-emerald-950\/40 { background-color: #d1fae5; }          /* emerald-100 */
+
+/* Borders */
+html:not(.dark) .border-violet-900\/40,
+html:not(.dark) .border-violet-900\/50,
+html:not(.dark) .border-violet-800\/60,
+html:not(.dark) .border-violet-800\/50 { border-color: #ddd6fe; }           /* violet-200 */
+html:not(.dark) .border-violet-700\/80,
+html:not(.dark) .border-violet-500\/50,
+html:not(.dark) .border-violet-500\/40,
+html:not(.dark) .border-violet-500\/20 { border-color: #c4b5fd; }           /* violet-300 */
+html:not(.dark) .border-violet-950\/80 { border-color: #ddd6fe; }          /* violet-200 */
+html:not(.dark) .border-rose-500\/40 { border-color: #fda4af; }            /* rose-300 */
+html:not(.dark) .border-emerald-500\/40 { border-color: #6ee7b7; }         /* emerald-300 */
+
+/* Primary CTA buttons (bg-white + blueShadow) need a real fill on light */
+html:not(.dark) .blueShadow {
+    background-color: #7c3aed;                 /* violet-600 */
+    color: #ffffff;
+    box-shadow: 0px 14px 40px rgba(109, 40, 217, 0.30);
+}
+html:not(.dark) .blueShadow .text-slate-950,
+html:not(.dark) .blueShadow.text-slate-950 { color: #ffffff; }
+
+/* Soften the dot-grid so it reads on light */
+html:not(.dark) .tech-grid {
+    background-image:
+        linear-gradient(rgba(124, 58, 237, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 58, 237, 0.08) 1px, transparent 1px);
+}
