@@ -1,5 +1,6 @@
 <script>
     import { base } from "$app/paths";
+    import ThemeToggle from "./ThemeToggle.svelte";
 
     export let y;
 
@@ -39,5 +40,9 @@
         >
             Contact
         </a>
+        <ThemeToggle />
     </nav>
+    <div class="sm:hidden">
+        <ThemeToggle />
+    </div>
 </header>
