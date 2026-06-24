@@ -12,6 +12,7 @@
         sky: "bg-gradient-to-b from-sky-400 via-cyan-500 to-blue-600",
         amber: "bg-gradient-to-b from-amber-400 via-orange-500 to-rose-700",
         rose: "bg-gradient-to-b from-rose-400 via-pink-500 to-fuchsia-700",
+        indigo: "bg-gradient-to-b from-indigo-400 via-indigo-500 to-violet-700",
     };
 
     $: bar = accentBar[project.accent] ?? accentBar.violet;

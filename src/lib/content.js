@@ -39,6 +39,13 @@ export const projectMeta = [
         github: "https://github.com/AliSinaDevelo/StreamHive",
         stack: ["Go 1.22+", "TCP / TLS", "Custom framing (SHV1)", "BlobStore API", "Prometheus", "Docker"],
     },
+    {
+        name: "Forge",
+        icon: "fa-solid fa-hammer",
+        accent: "indigo",
+        github: "https://github.com/AliSinaDevelo/md-files",
+        stack: ["Claude Code", "Markdown", "Python", "Prompt evals", "Safety hooks", "Plugin"],
+    },
 ];
 
 export const experienceMeta = [
@@ -60,7 +67,7 @@ export const t = {
         nav: { experience: "Experience", projects: "Projects", skills: "Skills", about: "About", resume: "Résumé", contact: "Contact" },
         hero: {
             loc: "Turin, Italy · open to remote roles",
-            role: "Backend / Platform Engineer",
+            role: "Software Engineer",
             desc: "I build and optimize scalable backends, data-heavy products, and integrations that hold up in production—currently shipping Go services, PostgreSQL migrations, and AWS platform work remotely for an Australia-based commerce company.",
             availA: "▸ EU-based contractor (partita IVA) or EOR",
             availB: "no visa sponsorship needed",
@@ -72,7 +79,7 @@ export const t = {
         projects: {
             eyebrow: "Projects",
             headA: "Code you can ", headEm: "inspect", headB: "",
-            intro: "A cross-LLM security lab plus four public repositories spanning real-time messaging, ML serving, hardened HTTP APIs, and low-level distributed systems—each with tests, containers or CI, and documentation meant for reviewers and operators.",
+            intro: "A cross-LLM security lab plus five public repositories spanning real-time messaging, ML serving, hardened HTTP APIs, low-level distributed systems, and AI developer tooling—each with tests, containers or CI, and documentation meant for reviewers and operators.",
             more: "More work on",
         },
         skills: {
@@ -149,6 +156,16 @@ export const t = {
                     "Makefile and golangci-lint; CI pins Actions to commit SHAs, uploads coverage and CycloneDX SBOM.",
                 ],
             },
+            Forge: {
+                tagline: "Installable Claude Code toolkit: specialist agents, progressive-disclosure skills, slash commands, safety hooks, and prompt evals.",
+                body: "Packages the patterns that make an AI coding agent genuinely effective—clear roles, disciplined methodology, scoped tools, and guardrails—into one installable plugin. Every artifact is plain Markdown or a small auditable script: no build step, nothing hidden.",
+                highlights: [
+                    "Specialist agents, progressive-disclosure skills, and slash commands wired into one installable plugin.",
+                    "Skills load only what each task needs, keeping the agent's context lean.",
+                    "Safety hooks plus a prompt-eval and hook-test harness that keep behavior in check.",
+                    "Plain Markdown and small scripts—auditable, with no build step or hidden magic.",
+                ],
+            },
         },
         experience_text: [
             { role: "Full Stack / Backend Engineer", where: "Adelaide, Australia (remote)", highlights: [
@@ -177,8 +194,8 @@ export const t = {
         ],
         terminal: {
             title: "alisina@workbench: ~",
-            whoami: "backend / platform engineer · remote · Turin, Italy",
-            whoamiBoot: "backend / platform engineer · remote",
+            whoami: "software engineer · backend / platform · remote · Turin, Italy",
+            whoamiBoot: "software engineer · backend / platform · remote",
         },
     },
 
@@ -186,7 +203,7 @@ export const t = {
         nav: { experience: "Esperienza", projects: "Progetti", skills: "Competenze", about: "Chi sono", resume: "CV", contact: "Contatti" },
         hero: {
             loc: "Torino, Italia · disponibile per ruoli da remoto",
-            role: "Backend / Platform Engineer",
+            role: "Software Engineer",
             desc: "Progetto e ottimizzo backend scalabili, prodotti data-intensive e integrazioni che reggono in produzione—attualmente lavoro da remoto su servizi Go, migrazioni PostgreSQL e infrastruttura AWS per un'azienda di e-commerce australiana.",
             availA: "▸ Contratto come libero professionista UE (partita IVA) o EOR",
             availB: "nessuna sponsorizzazione del visto richiesta",
@@ -198,7 +215,7 @@ export const t = {
         projects: {
             eyebrow: "Progetti",
             headA: "Codice che puoi ", headEm: "ispezionare", headB: "",
-            intro: "Un laboratorio di sicurezza cross-LLM più quattro repository pubblici che spaziano da messaggistica in tempo reale, serving ML, API HTTP irrobustite e sistemi distribuiti a basso livello—ciascuno con test, container o CI e documentazione pensata per revisori e operatori.",
+            intro: "Un laboratorio di sicurezza cross-LLM più cinque repository pubblici che spaziano da messaggistica in tempo reale, serving ML, API HTTP irrobustite, sistemi distribuiti a basso livello e strumenti per sviluppatori basati su AI—ciascuno con test, container o CI e documentazione pensata per revisori e operatori.",
             more: "Altro lavoro su",
         },
         skills: {
@@ -275,6 +292,16 @@ export const t = {
                     "Makefile e golangci-lint; la CI fissa le Action ai commit SHA, carica coverage e SBOM CycloneDX.",
                 ],
             },
+            Forge: {
+                tagline: "Toolkit installabile per Claude Code: agenti specializzati, skill a divulgazione progressiva, slash command, hook di sicurezza ed eval dei prompt.",
+                body: "Raccoglie in un unico plugin installabile i pattern che rendono davvero efficace un agente di coding AI—ruoli chiari, metodologia disciplinata, strumenti mirati e guardrail. Ogni artefatto è semplice Markdown o un piccolo script verificabile: nessuno step di build, niente di nascosto.",
+                highlights: [
+                    "Agenti specializzati, skill a divulgazione progressiva e slash command in un unico plugin installabile.",
+                    "Le skill caricano solo ciò che serve a ciascun task, mantenendo snello il contesto dell'agente.",
+                    "Hook di sicurezza più un harness di eval dei prompt e test degli hook che tengono sotto controllo il comportamento.",
+                    "Semplice Markdown e piccoli script—verificabili, senza step di build né magie nascoste.",
+                ],
+            },
         },
         experience_text: [
             { role: "Full Stack / Backend Engineer", where: "Adelaide, Australia (remoto)", highlights: [
@@ -303,8 +330,8 @@ export const t = {
         ],
         terminal: {
             title: "alisina@workbench: ~",
-            whoami: "backend / platform engineer · remoto · Torino, Italia",
-            whoamiBoot: "backend / platform engineer · remoto",
+            whoami: "software engineer · backend / platform · remoto · Torino, Italia",
+            whoamiBoot: "software engineer · backend / platform · remoto",
         },
     },
 };
