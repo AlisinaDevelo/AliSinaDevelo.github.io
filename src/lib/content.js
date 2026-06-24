@@ -61,8 +61,10 @@ export const skillItems = [
     ["Symfony", "Laravel", "Express", "Django", "FastAPI", "Gin", "REST / OpenAPI", "WebSockets", "GraphQL"],
     ["React", "Vue.js", "Svelte / SvelteKit", "Tailwind CSS"],
     ["AWS", "EC2 / ASG / ALB", "Lambda", "SQS", "ElastiCache", "Terraform", "Packer", "Docker", "Kubernetes", "GitHub Actions", "Linux"],
-    ["PostgreSQL", "MySQL / MariaDB", "SQLite", "MongoDB", "Redis / Valkey", "Kafka", "Prometheus", "Grafana", "OpenTelemetry", "slog / Pino"],
+    ["PostgreSQL", "MySQL / MariaDB", "SQLite", "MongoDB", "Redis / Valkey", "Kafka"],
+    ["Prometheus", "Grafana", "OpenTelemetry", "slog / Pino", "CloudWatch"],
     ["LLM agents & tooling", "prompt evals", "scikit-learn", "XGBoost", "TF–IDF", "embeddings"],
+    ["Threat modeling", "App hardening", "Supply-chain (SBOM · provenance)", "Detection engineering", "DFIR", "Reverse engineering", "Red / blue / purple teaming"],
 ];
 
 export const t = {
@@ -88,7 +90,7 @@ export const t = {
         skills: {
             eyebrow: "Skills",
             headA: "Stack aligned with ", headEm: "my résumé", headB: "",
-            titles: ["Programming", "Backend & APIs", "Frontend", "Cloud & Platform", "Data & observability", "AI / ML"],
+            titles: ["Programming", "Backend & APIs", "Frontend", "Cloud & Platform", "Data & messaging", "Observability", "AI / ML", "Security"],
             certs: "Certifications (high level): Stanford Algorithms Specialization, DeepLearning.AI Machine Learning, Meta Back-end and Front-end Developer programs.",
         },
         about: {
@@ -224,7 +226,7 @@ export const t = {
         skills: {
             eyebrow: "Competenze",
             headA: "Stack allineato al ", headEm: "mio CV", headB: "",
-            titles: ["Programmazione", "Backend & API", "Frontend", "Cloud & Platform", "Dati & osservabilità", "AI / ML"],
+            titles: ["Programmazione", "Backend & API", "Frontend", "Cloud & Platform", "Dati & messaging", "Osservabilità", "AI / ML", "Sicurezza"],
             certs: "Certificazioni (in sintesi): Stanford Algorithms Specialization, DeepLearning.AI Machine Learning, programmi Meta Back-end e Front-end Developer.",
         },
         about: {
