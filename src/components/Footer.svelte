@@ -1,57 +1,34 @@
 <footer
-    class="py-20 sm:py-32 bg-black border-t border-solid border-violet-950 flex flex-col gap-4 sm:gap-8 justify-center items-center" 
+    class="py-10 sm:py-12 bg-black border-t border-solid border-violet-950 flex flex-col gap-4 justify-center items-center"
 >
-    <p class="px-4 py-2 bg-white text-slate-950 font-medium" id="contact">
-        Connect with me &darr;
-    </p>
-    <div class="flex flex-col gap-4 items-center justify-center" id="contact">
-        <!-- <div
-            class="flex items-center gap-4 sm:gap-6 text-2xl sm:text-3xl md:text-4xl mx-auto"
+    <div class="flex items-center gap-5 text-lg text-slate-400">
+        <a
+            href="mailto:alisinakarimi.2003@gmail.com"
+            class="hover:text-violet-300 transition-colors"
+            aria-label="Email"
         >
-            <a>
-                <i class="fa-brands fa-linkedin-in" />
-            </a>
-            <a>
-                <i class="fa-brands fa-github" />
-            </a>
-        </div>
-        <p class="mx-auto text-sm opacity-70">or</p>
-        <p class="">alisinakarimi.2003@gmail.com</p> -->
-        <p>
-            <b class="pr-2">Email</b>
-            <a href="mailto:alisinakarimi.2003@gmail.com" class="text-violet-400"
-                >alisinakarimi.2003@gmail.com<sup class=""
-                    ><span class="text-xs scale-75 pl-0.5"
-                        ><i
-                            class="fa-brands fa-envelope fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
-                        /></span>
-                    </sup
-                ></a
-            >
-        </p>
-        <p>
-            <b class="pr-2">GitHub</b>
-            <a href="https://github.com/AliSinaDevelo/" target="_blank" rel="noopener noreferrer" class="text-violet-400"
-                >AliSinaDevelo<sup class=""
-                    ><span class="text-xs scale-75 pl-0.5"
-                        ><i
-                            class="fa-brands fa-github fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
-                        /></span
-                    ></sup
-                ></a
-            >
-        </p>
-        <p>
-            <b class="pr-2">LinkedIn</b>
-            <a href="https://www.linkedin.com/in/alisina-karimi/" target="_blank" rel="noopener noreferrer" class="text-violet-400"
-                >Alisina Karimi<sup class=""
-                    ><span class="text-xs scale-75 pl-0.5"
-                        ><i
-                            class="fa-brands fa-linkedin-in fa-solid fa-arrow-up-right-from-square text-xs scale-[75%] "
-                        /></span
-                    ></sup
-                ></a
-            >
-        </p>
+            <i class="fa-solid fa-envelope" />
+        </a>
+        <a
+            href="https://github.com/AliSinaDevelo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-violet-300 transition-colors"
+            aria-label="GitHub"
+        >
+            <i class="fa-brands fa-github" />
+        </a>
+        <a
+            href="https://www.linkedin.com/in/alisina-karimi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-violet-300 transition-colors"
+            aria-label="LinkedIn"
+        >
+            <i class="fa-brands fa-linkedin-in" />
+        </a>
     </div>
+    <p class="mono text-xs text-slate-600">
+        &copy; {new Date().getFullYear()} Alisina Karimi &middot; built with SvelteKit &amp; Tailwind
+    </p>
 </footer>

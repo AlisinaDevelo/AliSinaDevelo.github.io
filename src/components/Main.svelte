@@ -383,4 +383,83 @@
             </p>
         </div>
     </section>
+
+    <section id="contact" class="py-16 lg:py-24 scroll-mt-24">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <p class="text-xs uppercase tracking-[0.2em] text-violet-400/90 mb-2">Contact</p>
+            <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+                Let&rsquo;s <span class="poppins text-violet-400">talk</span>
+            </h3>
+            <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+                Open to remote backend / platform roles (EU-based contractor via partita IVA, or EOR).
+                No visa sponsorship needed. Based in Turin (CET) — happy to align with US/AU/NZ time zones.
+            </p>
+        </div>
+
+        <div class="max-w-2xl mx-auto">
+            <a
+                href="mailto:alisinakarimi.2003@gmail.com"
+                class="group flex items-center gap-4 rounded-2xl border border-violet-900/50 bg-slate-900/30 px-5 py-4 transition-colors hover:border-violet-500/50 hover:bg-violet-950/20"
+            >
+                <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-500/20 bg-slate-900/80 text-violet-300">
+                    <i class="fa-solid fa-envelope" aria-hidden="true" />
+                </span>
+                <span class="flex flex-col">
+                    <span class="text-xs uppercase tracking-wide text-slate-500">Email</span>
+                    <span class="text-sm sm:text-base text-slate-200 group-hover:text-white">alisinakarimi.2003@gmail.com</span>
+                </span>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-500 group-hover:text-violet-300" aria-hidden="true" />
+            </a>
+
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a
+                    href="https://github.com/AliSinaDevelo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-4 rounded-2xl border border-violet-900/50 bg-slate-900/30 px-5 py-4 transition-colors hover:border-violet-500/50 hover:bg-violet-950/20"
+                >
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-500/20 bg-slate-900/80 text-violet-300">
+                        <i class="fa-brands fa-github" aria-hidden="true" />
+                    </span>
+                    <span class="flex flex-col">
+                        <span class="text-xs uppercase tracking-wide text-slate-500">GitHub</span>
+                        <span class="text-sm sm:text-base text-slate-200 group-hover:text-white">AliSinaDevelo</span>
+                    </span>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/alisina-karimi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-4 rounded-2xl border border-violet-900/50 bg-slate-900/30 px-5 py-4 transition-colors hover:border-violet-500/50 hover:bg-violet-950/20"
+                >
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-500/20 bg-slate-900/80 text-violet-300">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true" />
+                    </span>
+                    <span class="flex flex-col">
+                        <span class="text-xs uppercase tracking-wide text-slate-500">LinkedIn</span>
+                        <span class="text-sm sm:text-base text-slate-200 group-hover:text-white">Alisina Karimi</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="mt-4 flex flex-col sm:flex-row items-stretch gap-4">
+                <a
+                    href="mailto:alisinakarimi.2003@gmail.com?subject=Book%20a%20chat"
+                    class="blueShadow flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-slate-950 font-medium transition-transform hover:scale-[1.01]"
+                >
+                    <i class="fa-solid fa-calendar-check" aria-hidden="true" />
+                    <span>Book a chat</span>
+                </a>
+                <a
+                    href={cvHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex-1 inline-flex items-center justify-center gap-2 rounded-full border border-violet-500/50 px-6 py-3 text-violet-200 font-medium transition-colors hover:bg-violet-500/10 hover:border-violet-400"
+                >
+                    <i class="fa-solid fa-file-arrow-down" aria-hidden="true" />
+                    <span>Download résumé (PDF)</span>
+                </a>
+            </div>
+        </div>
+    </section>
 </main>
