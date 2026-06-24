@@ -1,3 +1,9 @@
+<script>
+    import { locale } from "$lib/i18n";
+    import { t } from "$lib/content";
+    $: footer = t[$locale].footer;
+</script>
+
 <footer
     class="py-10 sm:py-12 bg-black border-t border-solid border-violet-950 flex flex-col gap-4 justify-center items-center"
 >
@@ -29,6 +35,6 @@
         </a>
     </div>
     <p class="mono text-xs text-slate-600">
-        &copy; {new Date().getFullYear()} Alisina Karimi &middot; built with SvelteKit &amp; Tailwind
+        &copy; {new Date().getFullYear()} Alisina Karimi &middot; {footer.built}
     </p>
 </footer>

@@ -2,6 +2,10 @@
     /** @type {{ name: string; icon: string; accent: keyof typeof accentBar; tagline: string; stack: string[]; body: string; highlights: string[]; github?: string; demo?: string; private?: boolean }} */
     export let project;
 
+    import { locale } from "$lib/i18n";
+    import { t } from "$lib/content";
+    $: labels = t[$locale].projectCard;
+
     const accentBar = {
         violet: "bg-gradient-to-b from-violet-400 via-violet-500 to-indigo-600",
         emerald: "bg-gradient-to-b from-emerald-400 via-teal-500 to-cyan-700",
@@ -48,7 +52,7 @@
                         class="inline-flex items-center gap-2 rounded-full border border-rose-500/40 bg-rose-950/40 px-4 py-2.5 text-sm font-medium text-rose-200"
                     >
                         <i class="fa-solid fa-lock text-xs" aria-hidden="true" />
-                        <span>Private · walkthrough on request</span>
+                        <span>{labels.private}</span>
                     </span>
                 {:else}
                     {#if project.demo}
@@ -59,7 +63,7 @@
                             class="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-950/40 px-4 py-2.5 text-sm font-medium text-emerald-200 transition-colors hover:border-emerald-400 hover:bg-emerald-600/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                         >
                             <i class="fa-solid fa-circle-play text-base" aria-hidden="true" />
-                            <span>Live demo</span>
+                            <span>{labels.liveDemo}</span>
                         </a>
                     {/if}
                     <a
@@ -69,7 +73,7 @@
                         class="inline-flex items-center justify-center gap-2 rounded-full border border-violet-500/40 bg-violet-950/50 px-4 py-2.5 text-sm font-medium text-violet-200 transition-colors hover:border-violet-400 hover:bg-violet-600/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                     >
                         <i class="fa-brands fa-github text-base" aria-hidden="true" />
-                        <span>See on GitHub</span>
+                        <span>{labels.seeOnGithub}</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70" aria-hidden="true" />
                     </a>
                 {/if}

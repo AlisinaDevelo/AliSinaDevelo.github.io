@@ -1,14 +1,18 @@
 <script>
     import { onMount } from "svelte";
     import { base } from "$app/paths";
+    import { locale } from "$lib/i18n";
+    import { t } from "$lib/content";
 
     $: cvHref = `${base}/assets/cv/output/CurriculumVitae.pdf`;
+    $: term = t[$locale].terminal;
 
     // Each command prints a short, honest block. Kept tiny on purpose — this is a
-    // hook for recruiters, not a real shell.
-    const commands = {
+    // hook for recruiters, not a real shell. Only the whoami line carries
+    // locale-specific text; the rest is code/tech, identical across languages.
+    $: commands = {
         whoami: [
-            { prompt: "whoami", out: ["backend / platform engineer · remote · Turin, Italy"] },
+            { prompt: "whoami", out: [term.whoami] },
         ],
         stack: [
             {
@@ -42,8 +46,8 @@
         ],
     };
 
-    const bootSequence = [
-        { prompt: "whoami", out: ["backend / platform engineer · remote"] },
+    $: bootSequence = [
+        { prompt: "whoami", out: [term.whoamiBoot] },
         { prompt: "cat stack.txt", out: [
             "Go · PHP/Symfony · TypeScript · Python",
             "AWS · Terraform · Packer · Docker · k8s",

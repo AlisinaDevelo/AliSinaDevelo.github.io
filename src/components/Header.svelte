@@ -1,16 +1,20 @@
 <script>
     import { base } from "$app/paths";
     import ThemeToggle from "./ThemeToggle.svelte";
+    import LanguageToggle from "./LanguageToggle.svelte";
+    import { locale } from "$lib/i18n";
+    import { t } from "$lib/content";
 
     export let y;
 
     $: cvHref = `${base}/assets/cv/output/CurriculumVitae.pdf`;
+    $: nav = t[$locale].nav;
     $: tabs = [
-        { name: "Experience", link: "#experience" },
-        { name: "Projects", link: "#projects" },
-        { name: "Skills", link: "#skills" },
-        { name: "About", link: "#about" },
-        { name: "Résumé", link: cvHref, external: true },
+        { name: nav.experience, link: "#experience" },
+        { name: nav.projects, link: "#projects" },
+        { name: nav.skills, link: "#skills" },
+        { name: nav.about, link: "#about" },
+        { name: nav.resume, link: cvHref, external: true },
     ];
 </script>
 
@@ -38,11 +42,13 @@
             href="#contact"
             class="text-sm rounded-full border border-violet-500/50 px-4 py-1.5 hover:bg-violet-500/10 hover:border-violet-400 duration-200"
         >
-            Contact
+            {nav.contact}
         </a>
+        <LanguageToggle />
         <ThemeToggle />
     </nav>
-    <div class="sm:hidden">
+    <div class="sm:hidden flex items-center gap-2">
+        <LanguageToggle />
         <ThemeToggle />
     </div>
 </header>
