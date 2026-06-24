@@ -118,6 +118,7 @@ html:not(.dark) .text-sky-300\/90 { color: #0369a1; }      /* sky-700 */
 html:not(.dark) .text-rose-200 { color: #be123c; }         /* rose-700 */
 
 /* Surfaces */
+html:not(.dark) .bg-black { background-color: #f1f5f9; }                    /* footer — slate-100 */
 html:not(.dark) .bg-slate-950 { background-color: #ffffff; }
 html:not(.dark) .bg-slate-950\/95 { background-color: rgba(255, 255, 255, 0.95); }
 html:not(.dark) .bg-slate-950\/40 { background-color: rgba(255, 255, 255, 0.55); }
@@ -152,6 +153,7 @@ html:not(.dark) .border-violet-500\/50,
 html:not(.dark) .border-violet-500\/40,
 html:not(.dark) .border-violet-500\/20 { border-color: #c4b5fd; }           /* violet-300 */
 html:not(.dark) .border-violet-950\/80 { border-color: #ddd6fe; }          /* violet-200 */
+html:not(.dark) .border-violet-950 { border-color: #ddd6fe; }              /* footer — violet-200 */
 html:not(.dark) .border-rose-500\/40 { border-color: #fda4af; }            /* rose-300 */
 html:not(.dark) .border-emerald-500\/40 { border-color: #6ee7b7; }         /* emerald-300 */
 
