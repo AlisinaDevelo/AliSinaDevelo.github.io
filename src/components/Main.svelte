@@ -1,6 +1,7 @@
 <script>
     import { base } from "$app/paths";
     import ProjectShowcase from "./ProjectShowcase.svelte";
+    import TerminalHero from "./TerminalHero.svelte";
 
     $: cvHref = `${base}/assets/cv/output/CurriculumVitae.pdf`;
 
@@ -248,29 +249,7 @@
                 </a>
             </div>
         </div>
-        <div
-            class="rounded-2xl border border-violet-800/60 bg-slate-950/70 backdrop-blur-sm overflow-hidden shadow-[0_20px_60px_-30px_rgba(109,40,217,0.5)]"
-        >
-            <div class="flex items-center gap-2 border-b border-violet-900/50 bg-slate-900/60 px-4 py-3">
-                <span class="h-3 w-3 rounded-full bg-rose-500/80" aria-hidden="true"></span>
-                <span class="h-3 w-3 rounded-full bg-amber-400/80" aria-hidden="true"></span>
-                <span class="h-3 w-3 rounded-full bg-emerald-400/80" aria-hidden="true"></span>
-                <span class="mono ml-2 text-xs text-slate-400">alisina@workbench: ~</span>
-            </div>
-            <div class="mono p-5 sm:p-6 text-[13px] leading-relaxed text-slate-300">
-                <p><span class="text-violet-400">$</span> whoami</p>
-                <p class="pl-3 text-slate-400">backend / platform engineer · remote</p>
-                <p class="mt-3"><span class="text-violet-400">$</span> cat stack.txt</p>
-                <p class="pl-3 text-slate-400">Go · PHP/Symfony · TypeScript · Python</p>
-                <p class="pl-3 text-slate-400">AWS · Terraform · Packer · Docker · k8s</p>
-                <p class="pl-3 text-slate-400">PostgreSQL · Redis/Valkey · SQS · Prometheus</p>
-                <p class="mt-3"><span class="text-violet-400">$</span> git log --oneline -3</p>
-                <p class="pl-3 text-emerald-300/90">perf&nbsp;&nbsp;3×–10× faster production queries</p>
-                <p class="pl-3 text-emerald-300/90">infra&nbsp;~60% cost cut · MariaDB → PostgreSQL</p>
-                <p class="pl-3 text-emerald-300/90">scale&nbsp;sessions + async work externalized</p>
-                <p class="mt-3"><span class="text-violet-400">$</span> <span class="caret">available for hire</span></p>
-            </div>
-        </div>
+        <TerminalHero />
     </section>
 
     <section id="experience" class="py-16 lg:py-24 scroll-mt-24">
