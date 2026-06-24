@@ -252,6 +252,28 @@
         <TerminalHero />
     </section>
 
+    <div class="tech-grid border-y border-violet-900/40 bg-slate-950/40">
+        <div
+            class="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-3 text-xs sm:text-sm sm:flex-row sm:items-center sm:justify-between"
+        >
+            <p class="mono flex items-center gap-2 text-slate-400">
+                <span class="relative flex h-2 w-2">
+                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                </span>
+                <span class="text-emerald-300/90">now</span>
+                <span class="text-slate-500">·</span>
+                <span>backend / platform @ WineHub (Adelaide, AU)</span>
+            </p>
+            <p class="mono flex items-center gap-2 text-slate-400">
+                <i class="fa-regular fa-clock text-slate-500" aria-hidden="true" />
+                <span>CET</span>
+                <span class="text-slate-600">·</span>
+                <span class="text-violet-300/90">open to remote (EU contractor / EOR)</span>
+            </p>
+        </div>
+    </div>
+
     <section id="experience" class="py-16 lg:py-24 scroll-mt-24">
         <div class="max-w-3xl mx-auto text-center mb-14">
             <p class="text-xs uppercase tracking-[0.2em] text-violet-400/90 mb-2">Experience</p>
